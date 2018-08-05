@@ -1,6 +1,8 @@
+//Class with movie details
 package com.collection.moviedetails;
 
 public class Movie_Details implements Comparable<Movie_Details> {
+	
 	private String mov_Name;
 	private String lead_actor;
 	private String lead_actress;
@@ -14,6 +16,7 @@ public class Movie_Details implements Comparable<Movie_Details> {
 		this.genre = genre;
 	}
 
+	//Getters and setters
 	public String getMov_Name() {
 		return mov_Name;
 	}
@@ -46,6 +49,7 @@ public class Movie_Details implements Comparable<Movie_Details> {
 		this.genre = genre;
 	}
 	
+	//Overriding equals and hashcode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -71,12 +75,14 @@ public class Movie_Details implements Comparable<Movie_Details> {
 		return true;
 	}
 
+	//Display movie details
 	@Override
 	public String toString() {
 		return "Movie_Details [mov_Name=" + mov_Name + ", lead_actor=" + lead_actor + ", lead_actress=" + lead_actress
 				+ ", genre=" + genre + "]";
 	}
 
+	//Compare movies by movie name
 	@Override
 	public int compareTo(Movie_Details movie) {
 		return this.mov_Name.compareTo(movie.mov_Name);

@@ -1,3 +1,4 @@
+//Maintain Savings accounts in a collection and add/remove accounts
 package com.collection.savingaccount;
 
 import java.util.Set;
@@ -7,7 +8,7 @@ import com.collection.moviedetails.Movie_Details;
 
 public class BankAccountList {
 		
-	public Set<Object> bankAccountList = new TreeSet<>();
+	public Set<SavingAccount> bankAccountList = new TreeSet<>();
 		
 	public void addAccount(SavingAccount account)
 	{

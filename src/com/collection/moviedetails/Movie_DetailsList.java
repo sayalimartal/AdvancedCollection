@@ -12,20 +12,20 @@ public class Movie_DetailsList {
 	
 	public void add_movie(Movie_Details movie)
 	{
-		movies.add(movie);
+		movies.add(movie);  //Add movie to Treeset
 	}
 	
 	public void remove_movie(Movie_Details movie)
 	{
-		movies.remove(movie);
+		movies.remove(movie);  //Remove movie from Treeset
 	}
 	
 	public void remove_AllMovies()
 	{
-		movies.removeAll(movies);
+		movies.removeAll(movies);  //Remove all movies from Treeset
 	}
 	
-	public void find_movie_By_mov_Name(String movieName) 
+	public void find_movie_By_mov_Name(String movieName) //Find a movie with specified movie name
 	{
 		for(Movie_Details mov:movies) {
 			if(mov.getMov_Name().equals(movieName)) {
@@ -37,7 +37,7 @@ public class Movie_DetailsList {
 			System.out.println("Movie with name "+movieName+" not found");
 	}
 	
-	public void find_movie_By_Genre(String genre) 
+	public void find_movie_By_Genre(String genre)  //Find a movie with specified genre
 	{
 		for(Movie_Details mov:movies) {
 			if(mov.getGenre().equals(genre)) {
@@ -49,6 +49,7 @@ public class Movie_DetailsList {
 			System.out.println("Movie with genre "+genre+" not found");
 	}
 	
+	//Sort movies based on parameter entered by user
 	public void decide_sort(int choice) {
 		ArrayList<Movie_Details> movieSetList= new ArrayList<>(movies);
 		

@@ -1,3 +1,4 @@
+//Class to hold instance of Saving account 
 package com.collection.savingaccount;
 
 public class SavingAccount implements Comparable<SavingAccount> {
@@ -53,7 +54,7 @@ public class SavingAccount implements Comparable<SavingAccount> {
 		this.isSalaryAccount = isSalaryAccount;
 	}
 	
-	public void withdraw(double amount) {
+	public void withdraw(double amount) {  //Withdraw amount from account
 		if(isSalaryAccount()) {
 			if(accBalance>amount && amount>0)
 				this.accBalance-=amount;
@@ -68,12 +69,12 @@ public class SavingAccount implements Comparable<SavingAccount> {
 		}
 	}
 	
-	public void deposit(double amount) {
+	public void deposit(double amount) {  //Deposit amount to account
 		if(amount>0)
 			this.accBalance += amount;
 	}
 	
-	
+	//Override equals and hashcode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -110,11 +111,13 @@ public class SavingAccount implements Comparable<SavingAccount> {
 		return true;
 	}
 
+	//Compare accounts on the basis of account Id
 	@Override
 	public int compareTo(SavingAccount savingAcc) {
 		return this.accId-savingAcc.accId;
 	}
 
+	//Display Savings Account details
 	@Override
 	public String toString() {
 		return "SavingAccount [accBalance=" + accBalance + ", accId=" + accId + ", accountHolderName="
